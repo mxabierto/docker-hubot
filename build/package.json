@@ -5,6 +5,7 @@
   "author": "Maurice Kaag <mkaag@me.com>",
   "description": "Helpful robot for you",
   "dependencies": {
+    "ckan": "https://github.com/okfn/ckan.js.git",
     "hubot": "^2.12.0",
     "hubot-auth": "^1.2.0",
     "hubot-codinglove": "^0.2.5",
@@ -24,7 +25,8 @@
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.3.0",
     "hubot-thank-you": "0.0.3",
-    "hubot-youtube": "^0.1.2"
+    "hubot-youtube": "^0.1.2",
+    "tracer": "^0.8.9"
   },
   "engines": {
     "node": "0.10.x"
