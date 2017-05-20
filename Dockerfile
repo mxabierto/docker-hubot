@@ -1,4 +1,4 @@
-FROM node:0.12-slim
+FROM node:4.8.3-wheezy
 MAINTAINER Maurice Kaag <mkaag@me.com>
 
 # -----------------------------------------------------------------------------
