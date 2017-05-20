@@ -5,25 +5,21 @@
 #   "ckan.js"
 #
 # Commands:
-#   hubot fresh data - Get the latest open datasets
-#   hubot data on <subject> - Query datasets for a subject
+#   hubot dgm - Get the latest open datasets
+#   hubot dgm <subject> - Query datasets for a subject
 
 CKAN = require 'ckan'
 logdev = require('tracer').colorConsole()
 
 clients = []
 
-# Yes, hard coding is a Bad Thing...
-#clients.push new CKAN.Client "https://opendata.swiss/en"
-#clients.push new CKAN.Client "https://data.stadt-zuerich.ch"
 clients.push new CKAN.Client "https://datos.gob.mx/busca"
 clients[0].requestType = 'GET'
 DATA_REQUEST = "Please make a request in the #data channel!"
-# ...and it should go into a .json or .yml file. We know.
 
 module.exports = (robot) ->
 
-	robot.respond /(fresh )?(data)( on)?(.*)/i, (res) ->
+	robot.respond /dgm?(.*)/i, (res) ->
 		query = res.match[res.match.length-1].trim()
 
 		if query is ""
